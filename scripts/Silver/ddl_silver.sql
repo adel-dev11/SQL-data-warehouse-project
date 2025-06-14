@@ -27,15 +27,17 @@ dwh_create_date datetime2 default getdate()
 
 if object_id ('Silver.crm_prd_info','u') is not null
        drop table Silver.crm_prd_info;
-create table Silver.crm_prd_info(
-prd_id int,
-prd_key nvarchar(50),
-prd_nm nvarchar(50),
-prd_cost numeric,
-prd_line nvarchar(2),
-prd_start_dt date,
-prd_end_dt date,
-dwh_create_date datetime2 default getdate()
+CREATE TABLE Silver.crm_prd_info(
+    prd_id int,
+    prd_key nvarchar(50),
+    category_id nvarchar(50),      
+    product_key nvarchar(50),       
+    prd_nm nvarchar(50),
+    prd_cost numeric,
+    prd_line nvarchar(50),          
+    prd_start_dt date,
+    prd_end_dt date,
+    dwh_create_date datetime2 default getdate()
 );
 
 
